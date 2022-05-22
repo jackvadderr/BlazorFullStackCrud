@@ -16,7 +16,18 @@
         </tr>
     </thead>
     <tbody>
+        @foreach(var hero in SuperHeroService.Heroes)
+        {
+            <tr>
+                <td>@hero.FirstName</td>
+                <td>@hero.LastName</td>
+                <td>@hero.HeroName</td>
+                <td>@hero.Comic.Name</td>
+                <td>
 
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 
