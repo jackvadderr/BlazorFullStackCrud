@@ -7,12 +7,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Pages\SuperHeroes.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.4" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.4" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\BlazorFullStackCrud.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\SuperHeroes.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\SuperHeroes.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\SuperHeroes.razor" />
   </ItemGroup>
 
 </Project>
