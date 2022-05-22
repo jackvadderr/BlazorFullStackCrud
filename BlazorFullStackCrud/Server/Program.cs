@@ -1,3 +1,4 @@
+global using Microsoft.EntityFrameworkCore;
 global using BlazorFullStackCrud.Shared;
 using Microsoft.AspNetCore.ResponseCompression;
 
