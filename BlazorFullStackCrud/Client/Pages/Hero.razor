@@ -1,0 +1,33 @@
+﻿@page "/hero"
+@page "/hero/{id:int}"
+@inject ISuperHeroService SuperHeroService
+
+@if (Id == null)
+{
+    <PageTitle>Criar um novo Super Heroi</PageTitle>
+    <h3>Criar um novo Super Heroi</h3>
+}
+else
+{
+    <PageTitle>Editar @hero.HeroName</PageTitle>
+    <h3>Editar @hero.HeroName</h3>
+}
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    SuperHero hero = new SuperHero { Comic = new Comic() };
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if(Id == null)
+        {
+            // Cria um novo heroi
+        }
+        else
+        {
+            hero = await SuperHeroService.GetSingleHero(int)Id);
+        }
+    }
+}
